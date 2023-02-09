@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <main className="flex justify-center items-center bg-gradient-to-br from-sky-400 via-rose-400 to-lime-400 h-[100vh] w-full">
+    <main className="flex justify-center items-center bg-gradient-to-br from-[#006466] via-[#212f45] to-[#4d194d] h-[100vh] w-full">
       Hello world
     </main>
   )
