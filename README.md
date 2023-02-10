@@ -23,5 +23,10 @@ Communication tool:
 ```
 
 ## Preview
+<img width="1440" alt="Get your weather app screenshot searching Harrow" src="https://user-images.githubusercontent.com/39496422/218054366-167703ca-756b-4d0f-a63b-0b548064aec8.png">
 
-<img src="/preview.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
+
+## Deployment
+
+The site is deployed on Netlify and is accessible at [Get your weather here!](https://joyful-trifle-d96524.netlify.app/) 
+
