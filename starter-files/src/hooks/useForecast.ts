@@ -10,7 +10,7 @@ export const useForecast = () => {
 
   const getSearchOptions = (value: string): void => {
     fetch(
-      `https://api.openweathermap.org/geo/1.0/direct?q=${value.trim()},&limit=5&appid=${
+      `https://api.openweathermap.org/geo/1.0/direct?q=${value.trim()}&limit=5&appid=${
         process.env.REACT_APP_API_KEY
       }`
     )
@@ -28,7 +28,6 @@ export const useForecast = () => {
   }
 
   const getForecast = (city: OptionType) => {
-    console.log('inside get forecast')
     fetch(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${city.lon}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
     )
@@ -42,9 +41,15 @@ export const useForecast = () => {
       })
   }
 
+  const clearForecast = () => {
+    console.log('clearing')
+    setForecast(null)
+    setOptions([])
+    setTerm('')
+  }
+
   const onSubmit = () => {
     if (!city) return
-    console.log('calling getForecast')
     getForecast(city)
   }
 
@@ -53,7 +58,6 @@ export const useForecast = () => {
   }
   useEffect(() => {
     if (city) {
-      console.log('city set', city)
       setTerm(city.name)
       setOptions([])
     }
@@ -66,5 +70,6 @@ export const useForecast = () => {
     onInputChange,
     onOptionSelect,
     onSubmit,
+    clearForecast,
   }
 }
