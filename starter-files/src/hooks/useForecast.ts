@@ -10,7 +10,7 @@ export const useForecast = () => {
 
   const getSearchOptions = (value: string): void => {
     fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${value.trim()},&limit=5&appid=${
+      `https://api.openweathermap.org/geo/1.0/direct?q=${value.trim()},&limit=5&appid=${
         process.env.REACT_APP_API_KEY
       }`
     )
